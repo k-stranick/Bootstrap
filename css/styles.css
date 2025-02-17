@@ -1,15 +1,14 @@
         /* Background and Theme */
-        /* body {
-            background: linear-gradient(to right, #121212, #1c1c1c);
-            color: white;
-            scroll-behavior: smooth;
-        } */
         body {
-            background: url('/assets/metlife.jpeg') no-repeat center center fixed;
-            background-size: cover;
+            background: url('/assets/metlife.jpeg') no-repeat center/cover fixed;
             position: relative;
             color: white;
             scroll-behavior: smooth;
+        }
+
+        a {
+            color: #ffcc00;
+            text-decoration: none;
         }
 
         /* Neon Glow Overlay */
@@ -20,32 +19,106 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            box-shadow: inset 0px 0px 100px rgba(255, 0, 255, 0.5);
+            background: rgba(0, 0, 0, 0.79);
+            box-shadow: inset 0px 0px 120px rgba(255, 0, 255, 0.6);
             z-index: -1;
         }
 
+
         /* Navbar Styling */
         .navbar {
-            box-shadow: 0px 4px 10px rgba(189, 185, 185, 0.2);
+            background: rgba(0, 0, 0, 0.85) !important;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s ease-in-out;
         }
 
-        /* ScrollSpy Active Link */
+
+        /* Active ScrollSpy Link */
         .navbar-nav .nav-link.active {
             color: #f4fdaf !important;
-            /* Highlight active section */
             font-weight: bold;
+            text-shadow: 0px 0px 10px rgba(255, 255, 0, 0.8);
+        }
+
+
+        .img-fluid {
+            border-radius: 4px;
         }
 
         /* Section Spacing */
         section {
-            padding: 80px 0;
-            min-height: 50vh;
+            padding: 85px 0;
+            text-align: center;
+            min-height: 65vh;
         }
 
-        /* Hover Effect for List Items */
+        section h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+
+        /* Custom CSS for about section */
+        .about-section {
+            max-width: 700px;
+            margin: 0 auto;
+            /* Center the section */
+            padding: 58px;
+            /* Reduce padding */
+        }
+
+        .about-section img {
+            max-width: 100%;
+            /* Ensure image scales properly */
+            height: auto;
+            margin-bottom: 15px;
+            /* Reduce space below the image */
+        }
+
+        .about-section p {
+            text-align: left;
+            /* Adjust text alignment if necessary */
+            line-height: 1.4;
+            /* Reduce line height for a more compact look */
+            font-size: 16px;
+            /* Adjust font size if needed */
+        }
+
+
+        /*  Video & Logo Styling */
+        .text-center img {
+
+            display: block;
+            margin: 20px auto;
+        }
+
+
+
+        /*  Lineup List */
+        .list-group {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
         .list-group-item {
-            transition: background 0.3s ease-in-out;
+            width: 100%;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+            font-size: 1.2rem;
+            border: none;
         }
 
         .list-group-item:hover {
@@ -53,51 +126,74 @@
             color: white !important;
         }
 
-        /* Gallery Images */
+
+        /* Gallery Styling */
         .gallery img {
             border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         .gallery img:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
         }
 
 
+        /* Call-to-Action Buttons */
+        .btn-primary {
+            background: linear-gradient(45deg, #ffcc00, #ff4500);
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+        }
+
+
+        /* Footer Social Icons */
         .social-links a {
             text-decoration: none !important;
-            /* Remove any underline or extra styling */
             margin: 0 15px;
-            /* Add space between icons */
             display: inline-block;
-            /* Ensure correct spacing */
-            font-size: 15px;
-            /* Ensure the size of icons */
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
         }
 
-        .social-links i {
-            vertical-align: middle;
-            /* Fix alignment */
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #ffcc00;
         }
 
 
-
-
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
             body {
-                background-color: #857f7f;
+                background-color: #222;
             }
 
             .navbar {
-                background-color: #857f7f !important;
+                background-color: #db0bd1 !important;
             }
 
             .navbar-toggler,
             .navbar-brand {
-                color: black !important;
+                color: white !important;
             }
 
             .navbar-nav .nav-link {
-                color: rgb(0, 0, 0) !important;
+                color: rgb(255, 255, 255) !important;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .text-center video {
+                width: 90%;
             }
         }

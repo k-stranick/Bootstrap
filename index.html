@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="return" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 </head>
 
 
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" class="position-relative">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50" class="position-relative">
 
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -35,45 +35,107 @@
             </div>
         </div>
     </nav>
-    <div id="return"></div>
-    <!-- Main Content -->
-    <div class="container mt-5 pt-5 position-relative">
-        <!-- <section id="signupModal" class="text-center">
-            <h1>System of a Down w/ Korn</h1>
-            <p>Live at Metlife Stadium</p>
-            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#signupModal">Register
-                Now</button>
-        </section> -->
-        <section id="tourvideo" class="text-center">
-            <h1>System of a Down w/ Korn</h1>
-            <p>Live at Metlife Stadium</p>
 
-            <!-- Video Tag for Local MP4 File -->
-            <video width="560" height="315" autoplay loop muted playsinline>
-                <source src="assets/wakeup.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <!-- Main Content -->
+    <div class="container mt-5 position-relative">
+        <section class="text-center">
+            <div>
+                <img src="assets/System-of-a-Down-Logo.jpg" class="img-fluid" alt="System of a Down & Korn">
+            </div>
+            <div>
+                <video width="1296" height="850" autoplay loop muted playsinline>
+                    <track src="assets/subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                    <track src="assets/descriptions_en.vtt" kind="descriptions" srclang="en" label="English">
+                    <source src="assets/wakeup.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
         </section>
 
         <!-- About Section -->
-        <section id="about">
-            <h2 class="text-center">About the Event</h2>
-            <p class="text-center">Join us at New Jersey's Metlife Stadium as iconic Armenian-American metal band
-                System of a Down headlines East Rutherford stadium with co-headliner Korn and special guests
-                Polyphia
-                and Wisp. Come witness greatness as something something something.</p>
+        <section id="about" class="about-section">
+            <h2 class="">About the Event</h2>
+            <p class="text-justify">
+                <img src="assets/test3.jpg" class="img-fluid" alt="System of a Down">
+                <br><br>
+                Get ready for an unforgettable night as System of a Down and Korn take the stage for an electrifying
+                performance at MetLife Stadium!
+                <br><br>
+                Experience the raw energy of System of a Down, delivering their signature intensity, sharp riffs, and
+                politically charged anthems. Korn brings their unmistakable sound, packed with heavy grooves and
+                haunting melodies
+                that have stood the test of time.
+                <br><br>
+                Joining them are Polyphia, blending technical mastery with genre-defying creativity, and Wisp, kicking
+                things off with an explosive opening set.
+
+                This is more than just a concert—it’s an experience. Don’t miss out!
+            </p>
         </section>
 
+
         <!-- Lineup Section -->
-        <section id="lineup">
-            <h2 class="text-center">Featured Lineup</h2>
-            <p class="text-center">Experience an unforgettable night of music and energy.</p>
-            <ul class="list-group text-center w-25 mx-auto">
-                <li class="list-group-item bg-dark text-light">System of a Down</li>
-                <li class="list-group-item bg-dark text-light">Korn</li>
-                <li class="list-group-item bg-dark text-light">Polyphia</li>
-                <li class="list-group-item bg-dark text-light">Wisp</li>
-            </ul>
+        <section id="lineup" class="text-center ">
+            <h2>Featured Lineup</h2>
+            <p>Click on a band name to learn more about them.</p>
+
+            <div class="list-group w-50 mx-auto">
+                <!-- System of a Down -->
+                <button class="list-group-item list-group-item-action bg-dark text-light" data-bs-toggle="collapse"
+                    data-bs-target="#soadInfo" aria-expanded="false" aria-controls="soadInfo">
+                    System of a Down
+                </button>
+                <div class="collapse" id="soadInfo">
+                    <div class="card card-body bg-secondary text-light">
+                        System of a Down is an Armenian-American heavy metal band known for their politically charged
+                        lyrics and unique sound. Their hits include "Chop Suey!" and "Toxicity."
+                        <a href="https://www.systemofadown.com/" target="_blank">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- Korn -->
+                <button class="list-group-item list-group-item-action bg-dark text-light" data-bs-toggle="collapse"
+                    data-bs-target="#kornInfo" aria-expanded="false" aria-controls="kornInfo"
+                    onKeyPress="if(event.key === 'Enter') this.click();">
+                    Korn
+                </button>
+                <div class="collapse" id="kornInfo">
+                    <div class="card card-body bg-secondary text-light">
+                        Korn pioneered the nu-metal genre with their raw energy and aggressive style. Famous songs
+                        include "Freak on a Leash" and "Blind."
+                        <a href="https://kornofficial.com/" target="_blank">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- Polyphia -->
+                <button class="list-group-item list-group-item-action bg-dark text-light" data-bs-toggle="collapse"
+                    data-bs-target="#polyphiaInfo" aria-expanded="false" aria-controls="polyphiaInfo"
+                    onKeyPress="if(event.key === 'Enter') this.click();">
+                    Polyphia
+                </button>
+                <div class="collapse" id="polyphiaInfo">
+                    <div class="card card-body bg-secondary text-light">
+                        Polyphia blends progressive metal with electronic and hip-hop influences, creating a unique
+                        instrumental sound. Their top tracks include "G.O.A.T" and "Playing God."
+                        <a href="https://polyphia.com/" target="_blank">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- Wisp -->
+                <button class="list-group-item list-group-item-action bg-dark text-light" data-bs-toggle="collapse"
+                    data-bs-target="#wispInfo" aria-expanded="false" aria-controls="wispInfo"
+                    onKeyPress="if(event.key === 'Enter') this.click();">
+                    Wisp
+                </button>
+                <div class="collapse" id="wispInfo">
+                    <div class="card card-body bg-secondary text-light">
+                        Wisp is an up-and-coming experimental metal band known for their atmospheric soundscapes and
+                        crushing riffs.
+                        <a href="https://www.wispmusic.com/#/" target="_blank">Learn more</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Gallery Section -->
