@@ -25,7 +25,6 @@
             z-index: -1;
         }
 
-
         /* Navbar Styling */
         .navbar {
             background: rgba(0, 0, 0, 0.85) !important;
@@ -33,14 +32,12 @@
             transition: background 0.3s ease-in-out;
         }
 
-
         /* Active ScrollSpy Link */
         .navbar-nav .nav-link.active {
             color: #f4fdaf !important;
             font-weight: bold;
             text-shadow: 0px 0px 10px rgba(255, 255, 0, 0.8);
         }
-
 
         .img-fluid {
             border-radius: 4px;
@@ -71,31 +68,23 @@
             color: #ffcc00;
         }
 
-
         /* Custom CSS for about section */
         .about-section {
             max-width: 700px;
             margin: 0 auto;
-            /* Center the section */
             padding: 58px;
-            /* Reduce padding */
         }
 
         .about-section img {
             max-width: 100%;
-            /* Ensure image scales properly */
             height: auto;
             margin-bottom: 15px;
-            /* Reduce space below the image */
         }
 
         .about-section p {
             text-align: left;
-            /* Adjust text alignment if necessary */
             line-height: 1.4;
-            /* Reduce line height for a more compact look */
             font-size: 16px;
-            /* Adjust font size if needed */
         }
 
 
@@ -105,8 +94,6 @@
             display: block;
             margin: 20px auto;
         }
-
-
 
         /*  Lineup List */
         .list-group {
@@ -139,7 +126,6 @@
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
         }
 
-
         /* Call-to-Action Buttons */
         .btn-primary {
             background: linear-gradient(45deg, #ffcc00, #ff4500);
@@ -156,7 +142,6 @@
             box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
         }
 
-
         /* Footer Social Icons */
         .social-links a {
             text-decoration: none !important;
@@ -169,7 +154,6 @@
             transform: scale(1.2);
             color: #ffcc00;
         }
-
 
         /* Mobile Optimizations */
         @media (max-width: 768px) {
