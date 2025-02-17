@@ -6,6 +6,7 @@
             scroll-behavior: smooth;
         }
 
+        /* universal a ref style*/
         a {
             color: #ffcc00;
             text-decoration: none;
